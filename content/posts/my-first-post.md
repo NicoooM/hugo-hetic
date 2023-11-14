@@ -1,7 +1,6 @@
 ---
 title: "Mastering Time: A Guide to Effective Time Management"
 date: 2022-11-20T09:03:20-08:00
-draft: true
 ---
 
 ![Textealternatif](https://images.unsplash.com/photo-1682686581427-7c80ab60e3f3?w=500auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8 "Titre de l'image")
