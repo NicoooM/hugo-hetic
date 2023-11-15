@@ -1,0 +1,26 @@
+{{ $featured_image := partial "func/GetFeaturedImage.html" . }}
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline white">
+    <div class="flex flex-column flex-row-ns items-center">
+      {{ if $featured_image }}
+          {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
+        <div class="{{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl3-ns" "pr3-ns" }} mb4 mb0-ns w-100 w-40-ns">
+          <a href="{{.RelPermalink}}" class="db grow">
+            <img style="height: 250px; object-fit: cover; width: 100%;" src="{{ $featured_image }}" class="img" alt="image from {{ .Title }}">
+          </a>
+        </div>
+      {{ end }}
+      <div class="blah w-100{{ if $featured_image }} w-60-ns {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pr3-ns" "pl3-ns" }}{{ end }}">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="{{.RelPermalink}}" class="color-inherit dim link">
+            {{ .Title }}
+          </a>
+        </h1>
+        <div style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;" class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          {{ .Summary }}
+        </div>
+        <p><time style="text-transform: capitalize;">{{- .Date | time.Format (default "January 2, 2006 " .Site.Params.date_format) -}}</time> - 5 min de lecture</p>
+      </div>
+    </div>
+  </div>
+</article>
