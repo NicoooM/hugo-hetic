@@ -1,7 +1,7 @@
 ---
 title: "Retour d'Expérience : GitHub Pages avec Hugo"
 date: 2023-11-15
-featured_image: "first-post.jpeg"
+featured_image: "first-post.jpg"
 slug: creer-une-app-hugo
 ---
 
